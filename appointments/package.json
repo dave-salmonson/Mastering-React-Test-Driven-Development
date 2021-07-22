@@ -4,33 +4,46 @@
   "description": "Appointments system",
   "main": "index.js",
   "scripts": {
+    "start": "webpack serve --config webpack.config.js --port 3001",
     "build": "webpack",
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "example.com"
+    "url": "placeholder.com"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.5",
-    "faker": "^4.1.0",
-    "jest": "^24.1.0",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3"
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "faker": "^5.5.3",
+    "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.0.6",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.44.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "@babel/runtime": "^7.3.4",
-    "react": "^16.9.0-alpha.0",
-    "react-dom": "^16.9.0-alpha.0"
+    "@babel/runtime": "^7.14.6",
+    "bootstrap": "^5.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
-  "prettier": {
-    "singleQuote": true,
-    "printWidth": 67,
-    "jsxBracketSameLine": true
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react"
+    ],
+    "plugins": [
+      "@babel/transform-runtime"
+    ]
   }
 }
